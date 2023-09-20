@@ -1,0 +1,56 @@
+<html lang="en">
+  <head>
+    <title> Login page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <link href="login.css" rel="stylesheet" type="text/css">
+    
+  </head>
+<body>
+  <script src="login.js"></script>
+  <div class="container">
+
+       <div class="login_form_container">
+                <div class="login_form">
+                    <h2 id="login-title">Sign Up</h2>
+                    <div class="input_group">
+                        <i class="fa fa-user"></i>
+                        <input
+                          id="username"
+                          type="text"
+                          placeholder="Username"
+                          class="input_text"
+                          autocomplete="off"
+                        />
+                    </div>
+                    <div class="input_group">
+                      <i class="fa fa-unlock-alt"></i>
+                      <input
+                        id="password"
+                        type="password"
+                        placeholder="Password"
+                        class="input_text"
+                        autocomplete="off"
+                      />
+                    </div>
+                    <div class="button_group" id="login_button">
+                      <a class="btn" onclick="check()" >Submit</a>
+                    </div>
+                    <div class="register-form">
+                      <p id="signup" onclick="RegisterForm()">Sign In</p>
+                    </div>
+                </div>
+          </div>
+
+          <div class="subscribe-container">
+            <h2>Subscribe to Email Updates</h2>
+            <input type="email" id="email" placeholder="Email address" required>
+            <button id="subscribe-button">Subscribe</button>
+        </div>
+    
+        <div class="email-list-container">
+            <h2>Email Addresses</h2>
+            <ul id="email-list"></ul>
+        </div>
+  </body>
+</html>

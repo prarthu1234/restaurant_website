@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="icon" href="2.jpeg">
+    <style>
+        /*https://unsplash.com/photos/46rezEDmah4?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+        https://unsplash.com/photos/xeUvnFJI6zo?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+        https://unsplash.com/photos/E2Wb2BZAEco?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink*/
+        
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            width: 100%;
+            height: 100vh;
+            padding: 20px 50px;
+            background-image: url(https://img.freepik.com/free-vector/hand-drawn-blackboard-menu-restaurant_23-2149075619.jpg);
+            background-size: cover;
+        }
+        
+        .homepage {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 99;
+            box-shadow: 5px 5px 20px black;
+            border-radius: 20px 1px 100px 2px;
+        }
+        
+        .homepage::before {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: -1000;
+            content: "";
+            width: 100%;
+            border-radius: 20px 1px 100px 2px;
+            height: 100%;
+            background: url(hb.jpg);
+            background-size: 100% 100%;
+            filter: contrast(80%);
+        }
+        
+        .blacksheed {
+            position: absolute;
+            right: 0;
+            width: 40%;
+            border-radius: 20px 1px 100px 2px;
+            height: 100%;
+            background-color: rgba(241, 240, 240, .3);
+        }
+        
+        .name {
+            position: absolute;
+            top: 30%;
+            left: 10%;
+            font-size: 20px;
+            font-style: oblique;
+        }
+        
+        .name h1 {
+            color: gold;
+            font-size: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+        
+        ul {
+            list-style: none;
+            position: absolute;
+            bottom: 10px;
+            left: 10%;
+        }
+        
+        ul .li {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid rgb(141, 87, 21);
+            cursor: pointer;
+        }
+        
+        ul .li:hover {
+            background-color: rgba(219, 163, 219, .4);
+        }
+        
+        ul .li:hover a {
+            color: orange;
+        }
+        
+        ul .li a {
+            font-size: 20px;
+            color: red;
+            text-decoration: none;
+        }
+        
+        .sp {
+            position: relative;
+        }
+        
+        .sp::before {
+            position: absolute;
+            bottom: -60px;
+            border: 1px solid rgb(141, 87, 21);
+            content: "Table";
+            font-size: 20px;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 99;
+        }
+        
+        .sinin {
+            position: relative;
+            top: 60%;
+            left: 40%;
+            padding: 10px;
+            border: 2px solid black;
+            background-color: rgba(15, 15, 15, .5);
+        }
+        
+        .sinin a {
+            font-size: 30px;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .fram {
+            position: absolute;
+            top: 0px;
+            right: 0;
+            width: 70%;
+            border-radius: 20px 1px 100px 2px;
+            background: url(images/1.jpg);
+            background-size: cover;
+            height: 100%;
+            opacity: 0;
+            padding: 40px;
+            transition: all .3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: scroll;
+        }
+        
+        .fram::-webkit-scrollbar {
+            display: none
+        }
+        
+        .lable {
+            position: fixed;
+            z-index: 9999999;
+        }
+        
+        #so:checked~.fram {
+            opacity: 1;
+            transition: all .3s;
+        }
+        
+        #so {
+            display: none;
+        }
+        
+        .child {
+            width: 290px;
+            height: 200px;
+            border: 2px solid black;
+            overflow: hidden;
+            margin: 0px;
+            display: inline-block;
+        }
+        
+        .child img {
+            width: 290px;
+            height: 200px;
+            transition: all .9s;
+            cursor: pointer;
+        }
+        
+        .child:hover img {
+            transform: scale(1.4);
+            transition: all .9s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="homepage">
+            <div class="blacksheed">
+                <span class="name"><h1></h1><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            </div>
+            <input type="checkbox" id="so">
+            <ul>
+                <li class="li"><a href="index.html">Home</a></li>
+                
+                <label for="so" class="lable">
+                    <span class="sp"></span>
+                    </label>
+
+            </ul>
+
+          
+            <div class="fram">
+                <div class="box">
+                    <div class="child"><img src="img/table 1.avif"></div>
+                    <div class="child"><img src="img/table 2.jpg"></div>
+                    <div class="child"><img src="img/table 3.avif"></div>
+                    <div class="child"><img src="img/table 4.avif"></div>
+                    <div class="child"><img src="img/table 5.avif"></div>
+                    <div class="child"><img src="img/table 6.avif"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
